@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Ortalaması Grafiği</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+
+<div id="grafik"></div>
+
+<script>
+    var donemler = ["1. dönem", "2. dönem", "3. dönem", "4. dönem", "5. dönem"];
+    var ANO = [2.46, 2.98, 2.67, 3.55, 2.56];
+    var AGNO = [2.46, 2.68, 2.89, 3.11, 3.01];
+
+    var izler = [
+        {
+            x: donemler,
+            y: ANO,
+            type: 'scatter',
+            mode: 'lines+markers',
+            name: 'ANO'
+        },
+        {
+            x: donemler,
+            y: AGNO,
+            type: 'scatter',
+            mode: 'lines+markers',
+            name: 'AGNO'
+        }
+    ];
+
+    Plotly.newPlot('grafik', izler);
+
+</script>
+ <a href="anasayfa.html">Anasayfaya Dönmek İçin Tıklayın</a>
+</body>
+</html>
